@@ -1,0 +1,24 @@
+{
+    "name": "comnect/consoler",
+    "description": "php console",
+    "minimum-stability": "alpha",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "yuuki.takezawa",
+            "email": "yuuki.takezawa@comnect.jp.net"
+        }
+    ],
+	"require": {
+		"comnect/console": "dev-master"
+	},
+	"require-dev": {
+		"phpunit/phpunit": "3.7.*"
+	},
+    "autoload": {
+        "classmap": [
+            "app/controller",
+            "app/model"
+        ]
+    }
+}
