@@ -1,7 +1,7 @@
 <?php
 /**
- * 
- * 
+ * database connection
+ * supports four database systems: MySQL, Postgres, SQLite, and SQL Server.
  */
 return array(
 	
