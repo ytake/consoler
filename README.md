@@ -27,17 +27,17 @@ $ php console
 
 ###consoler perform / コントローラーの実行
 ```bash 
-$ php console controller:perform (namespace controller)
+$ php console consoler:perform (namespace controller)
 ```
 実行するコントローラーをnamespaceで指定します。
 ```bash 
 #example
-$ php console controller:perform \\Sample
+$ php console consoler:perform \\Sample
 ```
 
 ###consoler version / consoler バージョン
 ```bash
-$ php console console:version
+$ php console consoler:version
 ```
 
 container
