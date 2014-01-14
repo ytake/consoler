@@ -3,6 +3,7 @@
     "description": "php console",
     "minimum-stability": "alpha",
     "license": "MIT",
+    "keywords": ["console"],
     "authors": [
         {
             "name": "yuuki.takezawa",
