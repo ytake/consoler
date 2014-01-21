@@ -4,6 +4,6 @@
  * hostname / コマンドで取得したhostnameを指定下さい
  *
  */
-return [
-	'development' => ['your hostname']
-];
+return array(
+	'development' => array('your hostname')
+);
