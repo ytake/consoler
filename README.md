@@ -40,6 +40,35 @@ $ php console consoler:perform \\Sample
 $ php console consoler:version
 ```
 
+basic.controller
+===========================
+```php
+<?php
+// namespaceはコマンドライン実行時に指定します。
+namespace Controller\Sample;
+// controllerをextendsします
+use Comnect\Console\Controller;
+use Model\Sample;
+class Sample extends Controller {
+    
+    protected $sample;
+    // sampleモデルをコンストラクターにタイプヒントで指定します。
+    
+    public function __construct(Sample $sample)
+    {
+        // container
+        $this->sample = $sample;
+    }
+ 
+    /**
+     * インターフェースで実装が定義づけられているのは、このperformのみです
+     */
+    public function perform(array $array)
+    {
+        // コマンド実行時に指定したoptionは$arrayに渡されます
+    }
+}
+```
 container
 =================
 using the Illuminate Container(laravel4)  
