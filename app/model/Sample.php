@@ -1,25 +1,32 @@
 <?php
 namespace Model;
 use Comnect\Datastore\Database;
-
 /**
  * Class Sample
  * @package Model
  */
 class Sample {
 
-	public function __construct(Database $db)
+	/** @var \Comnect\Datastore\Database */
+	protected $database;
+
+	public function __construct(Database $database)
 	{
-		/** @var \Comnect\Datastore\Database db */
-		$this->db = $db;
+		$this->database = $database;
 	}
 
 	/**
 	 * @return array
 	 */
-	public function getSample()
+	public function getStub()
 	{
-		$sql = "SELECT NOW()";
-		return $this->db->connect('master')->select($sql);
+		return array(
+			'message' => 'hello world'
+		);
+	}
+
+	public function getNow()
+	{
+		return $this->database->connect('slave')->select("SELECT NOW()");
 	}
 }

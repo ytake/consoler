@@ -1,11 +1,10 @@
 <?php
-
+use Comnect\Console\Controller;
 /**
  * Class Sample
  * @package Controller
- *
  */
-class Sample extends \Comnect\Console\Controller {
+class Sample extends Controller {
 
 	/** @var \Model\Sample */
 	protected $sample;
@@ -17,8 +16,14 @@ class Sample extends \Comnect\Console\Controller {
 		$this->sample = $sample;
 	}
 
-	public function perform()
+	/**
+	 * @param array $array
+	 * @return mixed|void
+	 */
+	public function perform(array $array)
 	{
-		var_dump($this->sample->getSample());
+		print_r($this->sample->getStub());
+		// use database
+		//$this->sample->getNow();
 	}
 }
