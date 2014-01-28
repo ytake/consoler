@@ -1,9 +1,9 @@
 {
     "name": "comnect/consoler",
-    "description": "php console",
+    "description": "php cli application package",
     "minimum-stability": "alpha",
     "license": "MIT",
-    "keywords": ["console"],
+    "keywords": ["console", "php", "cli"],
     "authors": [
         {
             "name": "yuuki.takezawa",
@@ -11,6 +11,7 @@
         }
     ],
 	"require": {
+		"php": ">=5.3.3",
 		"comnect/console": "dev-master"
 	},
     "autoload": {
