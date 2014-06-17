@@ -15,10 +15,9 @@
 		"comnect/console": "dev-master"
 	},
     "autoload": {
-        "classmap": [
-            "app/controller",
-            "app/model"
-        ]
+        "psr-4": {
+            "Application\\": "src/app/"
+        }
     },
     "prefer-stable": true
 }

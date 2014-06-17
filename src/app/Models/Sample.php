@@ -1,16 +1,22 @@
 <?php
-namespace Model;
+namespace Application\Models;
+
 use Comnect\Datastore\Database;
+
 /**
  * Class Sample
  * @package Model
  */
-class Sample {
+class Sample
+{
 
 	/** @var \Comnect\Datastore\Database */
 	protected $database;
 
-	public function __construct(Database $database)
+    /**
+     * @param Database $database
+     */
+    public function __construct(Database $database)
 	{
 		$this->database = $database;
 	}
@@ -25,7 +31,10 @@ class Sample {
 		);
 	}
 
-	public function getNow()
+    /**
+     * @return array
+     */
+    public function getNow()
 	{
 		return $this->database->connect('slave')->select("SELECT NOW()");
 	}
